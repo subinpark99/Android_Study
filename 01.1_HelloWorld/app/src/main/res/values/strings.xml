@@ -1,0 +1,3 @@
+<resources>
+    <string name="app_name">My Dice Roller</string>  //title bar 변경
+</resources>
