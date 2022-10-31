@@ -39,9 +39,10 @@ class MainActivity : AppCompatActivity() {
             resultText.text="1"
         else{
             var randomInt = resultText.text.toString().toInt()
-            if(randomInt<6)
+            if(randomInt<6) {
                 randomInt++
                 resultText.text = randomInt.toString()
+            }
         }
     }
 }
