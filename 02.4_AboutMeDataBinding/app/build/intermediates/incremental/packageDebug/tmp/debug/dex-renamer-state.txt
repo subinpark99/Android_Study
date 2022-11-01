@@ -1,0 +1,4 @@
+#Tue Nov 01 12:10:04 KST 2022
+base.0=C\:\\Users\\subin\\Desktop\\CE\\UMC\\Android_Study\\02.4_AboutMeDataBinding\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
