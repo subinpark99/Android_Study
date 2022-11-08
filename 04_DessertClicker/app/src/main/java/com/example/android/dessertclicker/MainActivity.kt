@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.OnLifecycleEvent
 import com.example.android.dessertclicker.databinding.ActivityMainBinding
 import timber.log.Timber
 
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     private var revenue = 0
     private var dessertsSold = 0
-    private lateinit var dessertTimer : DessertTimer;
+    private lateinit var dessertTimer : DessertTimer
 
     // Contains all the views
     private lateinit var binding: ActivityMainBinding
@@ -149,8 +151,9 @@ class MainActivity : AppCompatActivity() {
     /** Lifecycle Methods **/
     override fun onStart() {
         super.onStart()
+      //  dessertTimer.startTimer()
 
-        Timber.i("onStart called")  //onCreate 호출 직후 호출됨, 여러번 호출 가능
+        Timber.i("onStart called")  //타이머 시작
     }
 
     override fun onResume() {
@@ -161,12 +164,13 @@ class MainActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         Timber.i("onPause Called")
-        //홈 버튼 눌렀을 때 백그라운드로 포커스 잃음, share 버튼 눌렀을 때 포커스 잃음
     }
 
     override fun onStop() {
         super.onStop()
-        Timber.i("onStop Called")
+        //dessertTimer.stopTimer()
+
+        Timber.i("onStop Called")  //타이머 중지
     }
 
     override fun onDestroy() {
